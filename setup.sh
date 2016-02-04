@@ -33,12 +33,12 @@ brew cask install macvim            # Vim for mac
 brew cask install alfred            # Helpful executional tool
 brew cask install controlplane      # Context-based trigger tool
 brew cask install google-chrome     # Google chrome browser
-brew cask install xquartz           #  X11 apps
+brew cask install xquartz           # X11 apps
 brew cask install smcfancontrol     # Fan control widget
 brew cask install openttd           # The game OpenTTD
 brew cask install iterm2            # The well known iterm2
-#brew cask install airfoil
-#brew cask install airserver
+brew cask install airfoil
+brew cask install airserver
 brew cask install blender           # Blender 3d utility
 brew cask install dockertoolbox     # Docker toolbox
 brew cask install evernote          # Evernotes
@@ -55,6 +55,8 @@ brew cask install spotify           # Spotify player
 brew cask install steam             # Steam client
 brew cask install mactex            # Latex
 brew cask install flux              # Display light manager
+brew cask install java              # Java
+brew cask install elasticsearch     # Elasticsearch
 
 ########################### Setup the programs #################################
 
@@ -65,6 +67,16 @@ brew cask alfred link
 sudo bash -c 'echo "/usr/local/bin/fish" >> /etc/shells'
 chsh -s /usr/local/bin/fish
 
+# Install fish theme package
+curl -L https://github.com/oh-my-fish/oh-my-fish/raw/master/bin/install | fish
+
+# install fortune, cowsay and lolcat
+brew install fortune
+brew install cowsay
+sudo gem install lolcat
+
+# Setup fortune, cowsay and lolcat on fish
+sudo cat ./fish_config >> ~/.config/fish/config.fish
 
 # Remove install files
 brew cask cleanup
