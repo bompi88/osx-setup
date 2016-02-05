@@ -121,6 +121,9 @@ defaults write com.apple.Safari IncludeInternalDebugMenu 1
 # Set clock format menu bar date and 24 hours clock
 defaults write com.apple.menuextra.clock "DateFormat" 'EEE d MMM HH:mm:ss'
 
+# Set standard toolbar finder = add path button as default in finder toolbar
+defaults write com.apple.Finder "NSToolbar Configuration Browser" '{ "TB Default Item Identifiers" = ( "com.apple.finder.BACK", NSToolbarFlexibleSpaceItem, "com.apple.finder.SWCH", "com.apple.finder.ARNG", "com.apple.finder.ACTN", "com.apple.finder.SHAR", "com.apple.finder.LABL", NSToolbarFlexibleSpaceItem, NSToolbarFlexibleSpaceItem, "com.apple.finder.SRCH" ); "TB Display Mode" = 2; "TB Icon Size Mode" = 1; "TB Is Shown" = 1; "TB Item Identifiers" = ( "com.apple.finder.BACK", NSToolbarFlexibleSpaceItem, "com.apple.finder.SWCH", "com.apple.finder.ARNG", "com.apple.finder.ACTN", "com.apple.finder.PATH", "com.apple.finder.SHAR", "com.apple.finder.LABL", NSToolbarFlexibleSpaceItem, NSToolbarFlexibleSpaceItem, "com.apple.finder.SRCH" ); "TB Size Mode" = 1; }'
+
 killall -KILL SystemUIServer
 killall -HUP Dock
 killall Dock

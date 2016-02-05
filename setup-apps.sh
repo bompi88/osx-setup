@@ -13,6 +13,7 @@ brew install fish
 brew install ffmpeg
 brew install wget
 brew install python3
+brew install git-lfs
 
 # Update pip and setuptools
 pip3 install --upgrade pip setuptools
