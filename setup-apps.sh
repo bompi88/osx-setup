@@ -4,7 +4,7 @@
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # Install meteor
-curl https://install.meteor.com/ | sh
+hash meteor 2>/dev/null || curl https://install.meteor.com/ | sh
 
 # Installs with brew
 brew install node
@@ -14,6 +14,8 @@ brew install ffmpeg
 brew install wget
 brew install python3
 brew install git-lfs
+brew install mongodb
+
 
 # Update pip and setuptools
 pip3 install --upgrade pip setuptools
@@ -48,7 +50,6 @@ brew cask install steam             # Steam client
 brew cask install mactex            # Latex
 brew cask install flux              # Display light manager
 brew cask install java              # Java
-brew cask install elasticsearch     # Elasticsearch
 
 ########################### Setup the programs #################################
 
@@ -65,8 +66,7 @@ brew install cowsay
 sudo gem install lolcat
 
 # Setup fortune, cowsay and lolcat on fish
-sudo cat ./fish_config > ~/.config/fish/config.fish
+sudo grep -q -F '# Custom configs' ~/.config/fish/config.fish || cat ./fish_config >> ~/.config/fish/config.fish
 
 # Remove install files
 brew cask cleanup
-brew cask linkapps
