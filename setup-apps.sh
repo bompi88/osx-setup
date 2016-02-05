@@ -1,19 +1,10 @@
-
-# Install meteor
-curl https://install.meteor.com/ | sh
-
-
-
-
-
-
+#!/usr/bin/env bash
 
 # Install homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-# Install cask
-brew tap phinze/cask
-brew install brew-cask
+# Install meteor
+curl https://install.meteor.com/ | sh
 
 # Installs with brew
 brew install node
@@ -21,10 +12,10 @@ brew install graphicsmagick
 brew install fish
 brew install ffmpeg
 brew install wget
+brew install python3
 
-
-
-
+# Update pip and setuptools
+pip3 install --upgrade pip setuptools
 
 # Installs with cask
 brew cask install dropbox           # Dropbox client
@@ -60,11 +51,8 @@ brew cask install elasticsearch     # Elasticsearch
 
 ########################### Setup the programs #################################
 
-# Support cask apps in alfred
-brew cask alfred link
-
 # Add fish to supported shells
-sudo bash -c 'echo "/usr/local/bin/fish" >> /etc/shells'
+sudo bash -c "grep -q -F '/usr/local/bin/fish' /etc/shells || echo '/usr/local/bin/fish' >> /etc/shells"
 chsh -s /usr/local/bin/fish
 
 # Install fish theme package
@@ -76,7 +64,8 @@ brew install cowsay
 sudo gem install lolcat
 
 # Setup fortune, cowsay and lolcat on fish
-sudo cat ./fish_config >> ~/.config/fish/config.fish
+sudo cat ./fish_config > ~/.config/fish/config.fish
 
 # Remove install files
 brew cask cleanup
+brew cask linkapps
