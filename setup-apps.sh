@@ -70,3 +70,18 @@ sudo grep -q -F '# Custom configs' ~/.config/fish/config.fish || cat ./fish_conf
 
 # Remove install files
 brew cask cleanup
+
+######################## Install atom packages #################################
+
+# eslint
+apm install linter-eslint
+
+# React helpers
+apm install react
+
+# jsx linter
+apm install linter-jsxhint
+
+# SCSS linter
+gem install scss_lint
+apm install linter-scss-lint
