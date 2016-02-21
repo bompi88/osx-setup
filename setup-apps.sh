@@ -16,6 +16,7 @@ brew install python3
 brew install git-lfs
 brew install mongodb
 brew install nvm
+brew install clamav                 # Antivirus engine
 
 # Update pip and setuptools
 pip3 install --upgrade pip setuptools
@@ -50,6 +51,9 @@ brew cask install steam             # Steam client
 brew cask install mactex            # Latex
 brew cask install flux              # Display light manager
 brew cask install java              # Java
+brew cask install little-snitch     # Network monitoring
+brew cask install charles           # HTTP proxy / HTTP monitor / Reverse Proxy
+brew cask install easyfind          # Search app
 
 ########################### Setup the programs #################################
 
