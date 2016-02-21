@@ -52,6 +52,7 @@ brew cask install mactex            # Latex
 brew cask install flux              # Display light manager
 brew cask install java              # Java
 brew cask install little-snitch     # Network monitoring
+brew cask install micro-snitch      # Camera and mic snitcher
 brew cask install charles           # HTTP proxy / HTTP monitor / Reverse Proxy
 brew cask install easyfind          # Search app
 
