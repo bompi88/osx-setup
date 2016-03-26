@@ -70,14 +70,14 @@ brew install fortune
 brew install cowsay
 sudo gem install lolcat
 
+# Setup fortune, cowsay and lolcat on fish
+sudo grep -q -F '# Custom configs' ~/.config/fish/config.fish || cat ./fish_config >> ~/.config/fish/config.fish
+
 # Setup NVM
 mkdir ~/.nvm
 ln -s (brew --prefix nvm)/nvm.sh ~/.nvm/nvm.sh
 cd ~/.config/fish
 git clone git://github.com/passcod/nvm-fish-wrapper.git nvm-wrapper
-
-# Setup fortune, cowsay and lolcat on fish
-sudo grep -q -F '# Custom configs' ~/.config/fish/config.fish || cat ./fish_config >> ~/.config/fish/config.fish
 
 # Remove install files
 brew cask cleanup
