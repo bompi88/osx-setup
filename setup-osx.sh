@@ -118,6 +118,9 @@ defaults write com.apple.dock persistent-others -array-add '{ "tile-data" = { "l
 # Enable safari debug Menu
 defaults write com.apple.Safari IncludeInternalDebugMenu 1
 
+# Enable safari develop menu
+defaults write com.apple.Safari IncludeDevelopMenu 1
+
 # Set clock format menu bar date and 24 hours clock
 defaults write com.apple.menuextra.clock "DateFormat" 'EEE d MMM HH:mm:ss'
 
