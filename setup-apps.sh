@@ -21,6 +21,9 @@ brew install clamav                 # Antivirus engine
 # Update pip and setuptools
 pip3 install --upgrade pip setuptools
 
+# Take a look at: https://objective-see.com/products.html
+# and https://github.com/drduh/OS-X-Security-and-Privacy-Guide#dns
+
 # Installs with cask
 brew cask install dropbox           # Dropbox client
 brew cask install atom              # Atom file editor
