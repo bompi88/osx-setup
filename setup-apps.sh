@@ -59,6 +59,8 @@ brew cask install micro-snitch      # Camera and mic snitcher
 brew cask install charles           # HTTP proxy / HTTP monitor / Reverse Proxy
 brew cask install easyfind          # Search app
 
+brew cask install skim              # Pdf viewer
+
 ########################### Setup the programs #################################
 
 # Add fish to supported shells
@@ -100,3 +102,11 @@ apm install linter-jsxhint
 # SCSS linter
 gem install scss_lint
 apm install linter-scss-lint
+
+# Latex setup
+apm install language-latex
+apm install latex-friend
+apm install latextools
+apm install linter
+apm install linter-chktex
+apm install pdf-view
